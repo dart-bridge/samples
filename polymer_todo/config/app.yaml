@@ -1,0 +1,12 @@
+# [bridge.core]
+
+service_providers:
+  # Register all your service providers here.
+  - bridge.http.HttpServiceProvider
+  - bridge.tether.TetherServiceProvider
+  - bridge.database.DatabaseServiceProvider
+  - services.MainServiceProvider
+  - services.HttpExceptionsServiceProvider
+  - services.CommandsServiceProvider
+  # From todo_service package
+  - todo_service.TodoServiceProvider

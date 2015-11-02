@@ -1,0 +1,23 @@
+name: polymer_todo
+version: 0.1.0
+environment:
+  sdk: '>=1.12.0 <2.0.0'
+dependencies:
+  bridge: ^1.0.0-beta.1
+  todo_service:
+    path: ../todo_service
+  polymer: ^1.0.0-rc.5
+  web_components: ^0.12.0+3
+  reflectable: ^0.3.3
+  dart_to_js_script_rewriter: ^0.1.0+4
+dev_dependencies:
+  test: any
+  grinder: any
+transformers:
+- web_components:
+    entry_points:
+      - web/index.html
+- reflectable:
+    entry_points:
+      - web/main.dart
+- dart_to_js_script_rewriter

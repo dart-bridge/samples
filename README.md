@@ -8,5 +8,7 @@ can be used.
 > cd /path/to/somewhere
 > git clone https://github.com/dart-bridge/samples bridge_samples
 > cd bridge_samples/"name of a project"
+> pub get
+> cp .env.production .env # To run in development environment
 > dart bridge
 ```

@@ -1,0 +1,5 @@
+name: todo_service
+version: 0.1.0
+description: The common todo list service layer for Bridge examples
+dependencies:
+  bridge: ^1.0.0-beta.1

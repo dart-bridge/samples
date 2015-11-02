@@ -1,7 +1,0 @@
-# [bridge.view]
-
-# Templates options
-templates:
-  root: lib/templates
-  cache: storage/.templates.dart
-  cache_directory: storage/.templates
