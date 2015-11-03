@@ -4,14 +4,25 @@ html, body {
 
 body {
   font: 110% sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fefefe;
 }
 
 todo-app {
-  flex-basis: 20em;
+  -webkit-flex-basis: 20em;
+      -ms-flex-preferred-size: 20em;
+          flex-basis: 20em;
 }
 
 todo-list {
@@ -27,6 +38,9 @@ todo-list ul {
 }
 
 todo-list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -36,6 +50,9 @@ todo-list li:not(:last-child) {
 
 span.complete, span.delete {
   width: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
@@ -60,7 +77,10 @@ li:hover span.delete:before {
 } 
 
 span.description {
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   line-height: 1;
 }
 
@@ -69,14 +89,24 @@ span {
 }
 
 form {
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 input {
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   border: none;
   font: inherit;
   padding: 0.4em;
