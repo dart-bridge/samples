@@ -30,7 +30,7 @@ todo-list li {
   display: flex;
 }
 
-todo-list li:not(:last-child) {
+todo-item li  {
   border-bottom: 2px solid black;
 }
 
@@ -57,7 +57,7 @@ li:hover span.delete:before {
   content: '×';
   position: absolute;
   top: 0.2em;
-} 
+}
 
 span.description {
   flex: 1;
@@ -81,4 +81,3 @@ input {
   font: inherit;
   padding: 0.4em;
 }
-

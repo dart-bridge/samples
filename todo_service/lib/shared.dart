@@ -13,7 +13,6 @@ void registerTodoTransport() {
         'updated_at': task.updatedAt,
         'completed': task.completed,
         'description': task.description,
-        'title': task.title,
       },
       deserialize: (Map task) => new Task()
         ..id = task['id']
@@ -21,6 +20,5 @@ void registerTodoTransport() {
         ..updatedAt = task['updated_at']
         ..completed = task['completed']
         ..description = task['description']
-        ..title = task['title']
       );
 }

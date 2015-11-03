@@ -12,3 +12,4 @@ import 'package:angular2/angular2.dart';
 import 'package:todo_service/shared.dart';
 
 part 'app.dart';
+part 'todo_list.dart';

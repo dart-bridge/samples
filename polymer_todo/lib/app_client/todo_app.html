@@ -1,15 +1,6 @@
 <dom-module id="todo-app">
   <template>
-    <h1>Todo</h1>
-    <ul>
-      <template is="dom-repeat" items='items'>
-        <li>
-          <todo-item
-              title='{{item.title}}'
-              description='{{item.description}}'
-          ></todo-item>
-        </li>
-      </template>
-    </ul>
+    <h1>Tasks</h1>
+    <todo-list></todo-list>
   </template>
 </dom-module>

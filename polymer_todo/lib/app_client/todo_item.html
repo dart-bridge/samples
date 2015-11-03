@@ -1,6 +1,9 @@
 <dom-module id="todo-item">
   <template>
-    <h1>{{title}}</h1>
-    <p>{{description}}</p>
+    <li>
+      <span class$="{{completeClass(isChecked)}}"></span>
+      <span class="description">{{description}}</span>
+      <span class="delete" on-tap='removeTask'></span>
+    </li>
   </template>
 </dom-module>

@@ -5,9 +5,8 @@ class TodoList {
 
   TodoList(this._tasks);
 
-  Future<Task> create(String title, [String description]) async {
+  Future<Task> create(String description) async {
     final task = new Task()
-      ..title = title
       ..description = description;
 
     await _tasks.add(task);
@@ -16,6 +15,8 @@ class TodoList {
   }
 
   Future save(Task task) => _tasks.update(task);
+
+  Future delete(Task task) => _tasks.delete(task);
 
   Stream<Task> all() => _tasks.all();
 }

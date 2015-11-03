@@ -1,0 +1,14 @@
+<dom-module id="todo-list">
+  <template>
+    <ul>
+      <template is="dom-repeat" items='{{tasks}}'>
+        <todo-item task='{{item}}'></todo-item>
+      </template>
+      <li>
+        <form on-submit='newTaskSubmit'>
+          <input value="{{newTaskDescription::input}}" type="text" placeholder='New task...'>
+        </form>
+      </li>
+    </ul>
+  </template>
+</dom-module>

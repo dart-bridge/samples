@@ -2,15 +2,15 @@ library main;
 
 import 'dart:async';
 
-import 'package:todo_service/todo_service.dart';
 import 'package:bridge/bridge.dart';
 import '../app.dart';
+import 'package:todo_service/todo_service.dart';
 
 /// Controllers
-part 'todo_controller.dart';
+part 'tasks_controller.dart';
 
 class Main {
-  final TodoController controller;
+  final TasksController controller;
 
   Main(this.controller);
 
@@ -19,6 +19,9 @@ class Main {
   }
 
   tether(Tether tether) {
-    tether.listen('todos.all', controller.index);
+    tether.listen('tasks.all', controller.index);
+    tether.listen('tasks.new', controller.create);
+    tether.listen('tasks.save', controller.save);
+    tether.listen('tasks.delete', controller.delete);
   }
 }
