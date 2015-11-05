@@ -30,16 +30,19 @@ class TodoList {
   // This is bound to the input field
   String newTaskDescription = '';
 
-  TodoList() {
+  Tether _tether;
+
+  // Tether is provided by Angular dependency injector. See web/main.dart
+  TodoList(this._tether) {
     // When the component mounts, we fetch all tasks from the
     // server and adds them to our list.
-    tether.send('tasks.all').then(tasks.addAll);
+    _tether.send('tasks.all').then(tasks.addAll);
 
     // Then we start listening for updates broadcasted from the server
     // for changes in the task list.
-    tether.listen('tasks.publish', tasks.add);
-    tether.listen('tasks.delete', tasks.remove);
-    tether.listen('tasks.update', updateTask);
+    _tether.listen('tasks.publish', tasks.add);
+    _tether.listen('tasks.delete', tasks.remove);
+    _tether.listen('tasks.update', updateTask);
   }
 
   // When the new-task-form is submitted.
@@ -48,7 +51,7 @@ class TodoList {
     if (newTaskDescription == '') return;
 
     // Send the new task title through to the server. See lib/main/main.dart.
-    tether.send('tasks.new', newTaskDescription);
+    _tether.send('tasks.new', newTaskDescription);
 
     // Clear out the input.
     newTaskDescription = '';
@@ -60,7 +63,7 @@ class TodoList {
     task.completed = !task.completed;
 
     // Send the task to the server for saving the new state.
-    tether.send('tasks.save', task);
+    _tether.send('tasks.save', task);
   }
 
   // When the server reports a change to a task.
@@ -85,7 +88,7 @@ class TodoList {
     event.stopPropagation();
 
     // Simply send through the delete command with the task.
-    tether.send('tasks.delete', task);
+    _tether.send('tasks.delete', task);
   }
 
   // Computing the classes of the checkbox span. The CSS requires
