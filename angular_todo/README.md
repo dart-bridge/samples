@@ -16,7 +16,7 @@ Server started on http://localhost:1338
 =
 ```
 
-Open up [localhost:1337](http://localhost:1337) in Dartium and you should see the app.
+Open up [localhost:1338](http://localhost:1338) in Dartium and you should see the app.
 
 ## Try without Dartium
 After running the above setup, we can build the project
@@ -29,5 +29,5 @@ After running the above setup, we can build the project
 
 ```
 
-Open up [localhost:1337](http://localhost:1337) in any browser and you should see the app.
+Open up [localhost:1338](http://localhost:1338) in any browser and you should see the app.
 
