@@ -1,0 +1,9 @@
+@extends ('app')
+
+@start block ('content')
+  <h1>${task.description}</h1>
+  @if (task.completed)
+    <div>Completed!</div>
+  @end if
+  <a href="${route('tasks.edit', {'id': task.id})}">Edit</a>
+@end block

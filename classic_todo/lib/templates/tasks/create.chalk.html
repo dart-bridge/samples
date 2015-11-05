@@ -1,0 +1,8 @@
+@extends ('app')
+
+@start block ('content')
+<form action="${route('tasks.store')}" method='POST'>
+  <input type="text" name='description' placeholder='New task...'>
+  <input type="submit" value='Add'>
+</form>
+@end block

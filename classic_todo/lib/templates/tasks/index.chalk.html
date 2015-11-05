@@ -1,0 +1,29 @@
+@extends ('app')
+
+@start block ('content')
+  <h1>Tasks</h1>
+  <ul>
+    @for (task in tasks)
+      <li>
+        <form action="${route('tasks.update', {'id': task.id})}" method='POST'>
+          <input type="hidden" name='_method' value='PUT'>
+
+          <input type="checkbox" name='completed' ${task.completed ? 'checked' : ''}>
+          <input type="text" name='description' value='${task.description}'>
+
+          <input type="submit" value='Update'>
+        </form>
+        <form action="${route('tasks.destroy', {'id': task.id})}" method='POST'>
+          <input type="hidden" name='_method' value='DELETE'>
+          <input type="submit" value='Delete'>
+        </form>
+      </li>
+    @end for
+    <li>
+      <form action="${route('tasks.store')}" method='POST'>
+        <input type="text" name='description' placeholder='New task...'>
+        <input type="submit" value='Add'>
+      </form>
+    </li>
+  </ul>
+@end block

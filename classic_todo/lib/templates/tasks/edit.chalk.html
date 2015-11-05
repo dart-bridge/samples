@@ -1,0 +1,18 @@
+@extends ('app')
+
+@start block ('content')
+  <form action="${route('tasks.update', {'id': task.id})}" method='POST'>
+    <input type="hidden" name='_method' value='PUT'>
+
+    <input type="text" name="description" value='${task.description}'>
+    <input type="checkbox" name="completed" ${task.completed ? 'checked' : ''}>
+
+    <input type="submit" value='Update'>
+  </form>
+
+  <form action="${route('tasks.destroy', {'id': task.id})}" method='POST'>
+    <input type="hidden" name='_method' value='DELETE'>
+
+    <input type="submit" value='Delete'>
+  </form>
+@end block
