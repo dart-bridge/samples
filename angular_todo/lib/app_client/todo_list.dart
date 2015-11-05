@@ -2,11 +2,11 @@ part of app;
 
 @Component(
     selector: 'todo-list',
-    directives: const [NgFor, FORM_DIRECTIVES],
+    directives: const [NgFor, FORM_DIRECTIVES, NgClass],
     template: r'''
 <ul>
   <li *ng-for='#task of tasks' (click)="toggleCompletion(task)">
-    <span [class]="'complete' + (task.completed ? ' checked' : '')"></span>
+    <span [ng-class]="checkboxClass(task)"></span>
     <span class="description">{{task.description}}</span>
     <span class="delete" (click)='removeTask(task, $event)'></span>
   </li>
@@ -54,5 +54,12 @@ class TodoList {
   removeTask(Task task, Event event) {
     event.stopPropagation();
     tether.send('tasks.delete', task);
+  }
+
+  Map<String, bool> checkboxClass(Task task) {
+    return {
+      'complete': true,
+      'checked': task.completed,
+    };
   }
 }

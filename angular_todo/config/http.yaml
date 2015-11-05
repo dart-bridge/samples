@@ -3,6 +3,6 @@
 # HTTP Server options
 server:
   host: localhost
-  port: 1337
+  port: 1338
   public_root: web
   build_root: storage/.build

@@ -9,12 +9,12 @@ class TodoList {
     final task = new Task()
       ..description = description;
 
-    await _tasks.add(task);
+    await _tasks.save(task);
 
     return task;
   }
 
-  Future save(Task task) => _tasks.update(task);
+  Future save(Task task) => _tasks.save(task);
 
   Future delete(Task task) => _tasks.delete(task);
 

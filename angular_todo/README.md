@@ -12,7 +12,7 @@ back end.
 ...
 > cp .env.production .env
 > dart bridge start
-Server started on http://localhost:1337
+Server started on http://localhost:1338
 =
 ```
 

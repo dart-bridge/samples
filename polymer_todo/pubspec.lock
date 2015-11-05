@@ -36,7 +36,7 @@ packages:
   bridge:
     description: bridge
     source: hosted
-    version: "1.0.0-beta.1"
+    version: "1.0.0-beta.2"
   browser:
     description: browser
     source: hosted
@@ -310,7 +310,7 @@ packages:
   trestle:
     description: trestle
     source: hosted
-    version: "0.5.8"
+    version: "0.6.0"
   unsafe_extension:
     description: unsafe_extension
     source: hosted
